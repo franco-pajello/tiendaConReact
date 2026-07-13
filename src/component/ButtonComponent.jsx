@@ -1,7 +1,14 @@
-
-
-export default function ButtonComponent({text,onBotonClick}) {
+import Button from "react-bootstrap/Button";
+export default function ButtonComponent({
+  children,
+  onBotonClick,
+  variant = "light",
+  type = "button"
+}) {
+  
   return (
-    <button onClick={onBotonClick} >{text}</button>
-  )
+    <Button onClick={onBotonClick} variant={variant} type={type}>
+      {children}
+    </Button>
+  );
 }
